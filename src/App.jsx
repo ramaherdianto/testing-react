@@ -6,7 +6,7 @@ import Card from './components/Card';
 
 function App() {
     return (
-        <div className='App flex flex-col justify-center items-center'>
+        <div className='App min-h-screen flex flex-col justify-center items-center'>
             <div className='flex mt-7 gap-2'>
                 <Button
                     type='button'
