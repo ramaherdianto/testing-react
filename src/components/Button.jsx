@@ -5,7 +5,7 @@ const Button = (props) => {
         <>
             <button
                 {...props}
-                className={`${className} flex gap-x-2 items-center text-white px-4 py-2 rounded`}
+                className={`${className} flex gap-x-2 items-center whitespace-nowrap text-white px-4 py-2 rounded`}
             >
                 {text || children}
             </button>
