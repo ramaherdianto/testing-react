@@ -8,26 +8,15 @@ function App() {
     return (
         <div className='App min-h-screen flex flex-col justify-center items-center'>
             <div className='flex mt-7 gap-2'>
-                <Button
-                    type='button'
-                    onClick={() => console.log('Ragister dengan Facebook')}
-                >
+                <Button type='button' onClick={() => console.log('Ragister dengan Facebook')}>
                     <FaFacebookF className='w-5 h-5 stroke-1' />
                     Facebook
                 </Button>
-                <Button
-                    className='bg-red-500'
-                    type='submit'
-                    onClick={() => console.log('Login dengan Email')}
-                >
+                <Button className='bg-red-500' type='submit' onClick={() => console.log('Login dengan Email')}>
                     <GrMail />
                     Email
                 </Button>
-                <Button
-                    className='bg-transparent border border-slate-700 text-black'
-                    type='button'
-                    onClick={() => console.log('Ragister dengan Github')}
-                >
+                <Button className='bg-transparent border border-slate-700 text-black' type='button' onClick={() => console.log('Ragister dengan Github')}>
                     <FaGithubAlt className='w-5 h-5 stroke-1' />
                     Github
                 </Button>
@@ -37,13 +26,9 @@ function App() {
                 <Card>
                     <Card.Title>Hello React</Card.Title>
                     <Card.Body>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Excepturi tempore provident magni et odio quae
-                        accusantium illo architecto, blanditiis quas eveniet
-                        dolor delectus dolorum reiciendis minima corrupti modi,
-                        consequuntur beatae explicabo. Atque delectus quibusdam
-                        doloremque totam necessitatibus ipsum voluptatibus
-                        repudiandae officia minus, rerum rem molestiae!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempore provident magni et odio quae accusantium illo architecto, blanditiis quas eveniet dolor delectus
+                        dolorum reiciendis minima corrupti modi, consequuntur beatae explicabo. Atque delectus quibusdam doloremque totam necessitatibus ipsum voluptatibus repudiandae officia minus,
+                        rerum rem molestiae!
                     </Card.Body>
                     <Card.Footer>
                         <Button>Learn more</Button>
