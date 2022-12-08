@@ -47,6 +47,7 @@ export const Todo = () => {
                     <form onSubmit={handleSubmit}>
                         <div className='flex gap-2 mb-10'>
                             <Input
+                                isFocused
                                 value={newTask}
                                 onChange={(e) => setNewTask(e.target.value)}
                                 required

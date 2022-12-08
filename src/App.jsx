@@ -8,7 +8,7 @@ import { Todo } from './components/Todo';
 
 function App() {
     return (
-        <div className='App bg-slate-800 min-h-screen flex flex-col justify-center items-center'>
+        <div className='App bg-violet-600 min-h-screen flex flex-col justify-center items-center'>
             <Todo />
         </div>
     );
