@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Button from './Button';
 import Card from './Card';
@@ -7,6 +7,8 @@ import { Input } from './Input';
 export const Todo = () => {
     const [newTask, setNewTask] = useState('');
     const [tasks, setTasks] = useState([]);
+    const [online, setOnline] = useState(false);
+    const [scrollPosition, setScrollPosition] = useState(window.scroll);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -40,12 +42,12 @@ export const Todo = () => {
     };
 
     return (
-        <div className='w-[50%] min-h-screen mt-20'>
+        <div className='w-[50%]'>
             <Card>
                 <Card.Title>Todo React</Card.Title>
                 <Card.Body>
                     <form onSubmit={handleSubmit}>
-                        <div className='flex gap-2 mb-10'>
+                        <div className='flex gap-2'>
                             <Input
                                 isFocused
                                 value={newTask}
@@ -60,7 +62,7 @@ export const Todo = () => {
                     </form>
 
                     {tasks.length > 0 ? (
-                        <ol className='space-y-4'>
+                        <ol className='space-y-4 mt-10'>
                             {tasks.map((task) => (
                                 <li key={task.id}>
                                     <div className='flex justify-between items-center'>
