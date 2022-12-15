@@ -10,9 +10,9 @@ import Button from './Button';
 //         console.log(online ? 'Online' : 'Offline');
 //     });
 
-// useEffect(() => {
+// `useEffect(() => {
 //     console.log(online ? 'I am Online Now.' : 'I am Offline Now.');
-// }, [online]);
+// }, [online]);`
 
 function updateScrollPosition() {
     const windowScrolling = window.scrollY;
