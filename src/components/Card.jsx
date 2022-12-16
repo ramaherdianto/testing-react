@@ -1,7 +1,7 @@
 const Card = ({ children }) => {
     return (
         <>
-            <div className='shadow rounded-lg overflow-hidden bg-white'>{children}</div>
+            <div className='shadow rounded-lg overflow-hidden w-[500px] bg-white'>{children}</div>
         </>
     );
 };
@@ -10,7 +10,7 @@ const Title = ({ children }) => {
     return (
         <>
             <div className='p-4 border-b'>
-                <h1 className='text-xl'>{children}</h1>
+                <h1 className='text-2xl font-semibold'>{children}</h1>
             </div>
         </>
     );

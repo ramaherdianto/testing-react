@@ -1,18 +1,35 @@
 import { useState } from 'react';
-import { FaFacebookF, FaGithubAlt } from 'react-icons/fa';
-import { GrMail } from 'react-icons/gr';
-import Api from './components/Api';
+import { useRef } from 'react';
 import Button from './components/Button';
 import Card from './components/Card';
 import { Input } from './components/Input';
-import { Todo } from './components/Todo';
+import useJoke from './hooks/useJoke';
 
 function App() {
+    const nameRef = useRef('');
+    const [name, setName] = useState('');
+    const joke = useJoke(name);
+
+    const generateJoke = (e) => {
+        e.preventDefault();
+        setName(nameRef.current.value);
+    };
+
     return (
-        <div className='App bg-violet-600 min-h-screen flex flex-col justify-center items-center'>
-            {/* <Todo /> */}
-            {/* <UseEffect /> */}
-            <Api />
+        <div className='App bg-violet-600 min-h-screen px-40 flex flex-col justify-center items-center'>
+            <Card>
+                <Card.Title>Joke</Card.Title>
+                <Card.Body>
+                    <p className='mb-4'>{joke.value}</p>
+
+                    <Input ref={nameRef} />
+                </Card.Body>
+                <Card.Footer>
+                    <Button className='bg-violet-600' onClick={generateJoke}>
+                        Generate a Joke
+                    </Button>
+                </Card.Footer>
+            </Card>
         </div>
     );
 }
